@@ -31,5 +31,20 @@ namespace WpfApp8
             new ThreadingWindow().ShowDialog();
             this.Show();
         }
+
+        private void Window_Click(object sender, RoutedEventArgs e)
+        {
+
+            this.Hide();
+            new MultiWindow().ShowDialog();
+            this.Show();
+        }
+
+        private void TaskWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new TaskWindow().ShowDialog();
+            this.Show();
+        }
     }
 }

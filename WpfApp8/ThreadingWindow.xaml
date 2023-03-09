@@ -53,7 +53,7 @@
                 <ProgressBar x:Name="progressBar3"/>
 
             </DockPanel>
-            <Label Margin="10 10 10 0">ч.4 Передача даннх в потоки </Label>
+            <Label Margin="10 10 10 0">ч.4 Передача даннх в потоки</Label>
             <DockPanel Height="20" Margin="10 0 10 20">
                 <Button Content="Start4" DockPanel.Dock="Left"
                         Margin="0 0 10 0" Padding="7 1"
@@ -66,7 +66,7 @@
                 <ProgressBar x:Name="progressBar4"/>
 
             </DockPanel>
-
+            
         </StackPanel>
     </Grid>
 </Window>

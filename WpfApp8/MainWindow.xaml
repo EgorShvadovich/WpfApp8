@@ -14,5 +14,13 @@
                 HorizontalContentAlignment="Left" 
                 Click="Threading_Click"
         Margin="10" Padding="10,5" FontSize="18" />
+        <Button x:Name="MultiWindow" Content="2. Синхронизация"  
+                HorizontalContentAlignment="Left" 
+                Click="Window_Click"
+        Margin="10" Padding="10,5" FontSize="18" />
+        <Button x:Name="TaskWindow" Content="3. Mnogozadachnost"  
+                HorizontalContentAlignment="Left" 
+                Click="TaskWindow_Click"
+        Margin="10" Padding="10,5" FontSize="18" />
     </StackPanel>
 </Window>

@@ -122,5 +122,16 @@ namespace WpfApp8
             });
            
         }
+
+        private void ButtonStop5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ButtonStart5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
