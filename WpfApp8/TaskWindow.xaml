@@ -17,7 +17,7 @@
         </Border>
 
         <StackPanel Orientation="Vertical">
-            <Label Margin="10 10 10 0"></Label>
+            <Label Margin="10 10 10 0">1</Label>
             <DockPanel Margin="10 0 10 0">
                 <Button Content="Start" DockPanel.Dock="Left"  
                        Margin="0 0 10 0" Padding="7 4" 
@@ -29,7 +29,57 @@
                         Click="ButtonStop1_Click"/>
                 <ProgressBar x:Name="progressBar1"/>
             </DockPanel>
-            
+
+            <Label Margin="10 10 10 0">2</Label>
+            <DockPanel Margin="10 0 10 0">
+                <Button Content="demo1" DockPanel.Dock="Left"  
+                       Margin="0 0 10 0" Padding="7 4" 
+                       x:Name="ButtonStart2" 
+                       Click="ButtonStart2_Click"/>
+                <Button Content="demo2" DockPanel.Dock="Left"  
+                       Margin="0 0 10 0" Padding="7 4" 
+                       x:Name="ButtonDemo2" 
+                       Click="ButtonDemo2_Click"/>
+                <Button Content="demo3" DockPanel.Dock="Left"  
+                       Margin="0 0 10 0" Padding="7 4" 
+                       x:Name="ButtonDemo3" 
+                       Click="ButtonDemo3_Click"/>
+                <Button Content="demo4" DockPanel.Dock="Left"  
+                       Margin="0 0 10 0" Padding="7 4" 
+                       x:Name="ButtonDemo4" 
+                       Click="ButtonDemo4_Click"/>
+                <Button Content="Stop" DockPanel.Dock="Right" 
+                        Margin="10 0 0 0" Padding="7 4" 
+                          x:Name="ButtonStop2" 
+                        Click="ButtonStop2_Click"/>
+               
+            </DockPanel>
+            <Label Margin="10 10 10 0">3</Label>
+            <DockPanel Margin="10 0 10 0">
+                <Button Content="Demo" DockPanel.Dock="Left" Background="Tomato" 
+                       Margin="0 0 10 0" Padding="7 4" 
+                       x:Name="ButtonDemo_1" 
+                       Click="ButtonDemo_1_Click"/>
+                <Button Content="Demo2" DockPanel.Dock="left" 
+                        Margin="10 0 0 0" Padding="7 4" 
+                          x:Name="ButtonDemo_2" 
+                        Click="ButtonDemo_2_Click"/>
+                <Button Content="Demo3" DockPanel.Dock="left" 
+                        Margin="10 0 0 0" Padding="7 4" 
+                          x:Name="ButtonDemo_3" 
+                        Click="ButtonDemo_3_Click"/>
+                <Button Content="Demo4" DockPanel.Dock="left" 
+                        Margin="10 0 0 0" Padding="7 4" 
+                          x:Name="ButtonDemo_4" 
+                        Click="ButtonDemo_4_Click"/>
+                <Button Content="Demo5" DockPanel.Dock="left" 
+                        Margin="10 0 0 0" Padding="7 4" 
+                          x:Name="ButtonDemo_5" 
+                        Click="ButtonDemo_5_Click"/>
+
+            </DockPanel>
         </StackPanel>
+
+       
     </Grid>
 </Window>
