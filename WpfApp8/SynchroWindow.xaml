@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp8.SynchroWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="SynchroWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Salmon" BorderThickness="1" Grid.Column="1">
+            <TextBlock Grid.Column="1" x:Name="ConsoleBlock"/>
+        </Border>
+        <StackPanel Orientation="Vertical">
+            <Label Content="Объект синхронизации" FontWeight="DemiBold" FontSize="20"/>
+            <Label Content="1.Lock" FontSize="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartLock" Content="Start" FontSize="16" Margin="10 0" Padding="8 4" Click="StartLock_Click"/>
+            </StackPanel>
+            <Label Content="2.Monitor" FontSize="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartMonitor" Content="Start"
+                 FontSize="16" Margin="10 0" Padding="8 4" Click="StartMonitor_Click"/>
+            </StackPanel>
+            <Label Content="3.Mutex" FontSize="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartMutex" Content="Start" 
+                FontSize="16" Margin="10 0" Padding="8 4" Click="StartMutex_Click"/>
+            </StackPanel>
+            <Label Content="4.EventWaitHandle" FontSize="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartEventWaitHandle" Content="Start" 
+                FontSize="16" Margin="10 0" Padding="8 4" Click="StartEventWaitHandle_Click"/>
+            </StackPanel>
+            <Label Content="5.Semaphore" FontSize="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartSymaphore" Content="Start"
+                FontSize="16" Margin="10 0" Padding="8 4" Click="StartSemaphore_Click"/>
+            </StackPanel>
+            <Label Content="5.SemaphoreSlim" FontSize="10"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartSymaphoreSlim" Content="Start"
+                FontSize="16" Margin="10 0" Padding="8 4" Click="StartSymaphoreSlim_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -46,5 +46,12 @@ namespace WpfApp8
             new TaskWindow().ShowDialog();
             this.Show();
         }
+
+        private void SynchroButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new SynchroWindow().ShowDialog();
+            this.Show();
+        }
     }
 }

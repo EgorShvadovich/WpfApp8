@@ -22,5 +22,9 @@
                 HorizontalContentAlignment="Left" 
                 Click="TaskWindow_Click"
         Margin="10" Padding="10,5" FontSize="18" />
+        <Button x:Name="SynchroButton" Content="4. Synchronization"  
+                HorizontalContentAlignment="Left" 
+                Click="SynchroButton_Click"
+        Margin="10" Padding="10,5" FontSize="18" />
     </StackPanel>
 </Window>
