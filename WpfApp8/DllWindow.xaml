@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp8.DllWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="DllWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="MsgA" Content="MessageBoxA" Click="MsgA_Click"/>
+                <Button x:Name="MsgW" Content="MessageBoxW" Click="MsgW_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Msg1" Content="Retry" Click="Msg1_Click"/>
+                <Button x:Name="MsgError" Content="Error" Click="MsgError_Click"/>
+                <Button x:Name="MsgConfirm" Content="Confirm" Click="MsgConfirm_Click"/>
+                <Button x:Name="MsgQuestion" Content="Question" Click="MsgQuestion_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Beep1" Content="Beep" Click="Beep1_Click"/>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

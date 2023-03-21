@@ -26,5 +26,13 @@
                 HorizontalContentAlignment="Left" 
                 Click="SynchroButton_Click"
         Margin="10" Padding="10,5" FontSize="18" />
+        <Button x:Name="ProcessButton" Content="5. Process"  
+                HorizontalContentAlignment="Left" 
+                Click="ProcessButton_Click"
+        Margin="10" Padding="10,5" FontSize="18" />
+        <Button x:Name="DllButton" Content="6. Dll"  
+                HorizontalContentAlignment="Left" 
+                Click="DllButton_Click"
+        Margin="10" Padding="10,5" FontSize="18" />
     </StackPanel>
 </Window>
