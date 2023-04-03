@@ -26,6 +26,25 @@
                 <Button x:Name="Beep1" Content="Beep" Click="Beep1_Click"/>
                 
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="SayHello" Content="Thread" Click="SayHello_Click"/>
+                <Label x:Name="SayHelloLabel"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartTimer" Content="StartTimer" Click="StartTimer_Click"/>
+                <Label x:Name="TickLabel"></Label>
+                <Button x:Name="StopTimer" Content="StopTimer" Click="StopTimer_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartTimer1" Content="Start"
+                        Margin="10" Padding="7 4 7 2" FontSize="16"
+                        Click="StartTimer1_Click"/>
+                <Label x:Name ="TicksLable1" Width="120"
+                       Content="00:00:00.00" FontSize="20"/>
+                <Button x:Name="StopTimer1" Content="Stop" IsEnabled="false"
+                        Margin="10" Padding="7 4 7 2" FontSize="16"
+                        Click="StopTimer1_Click"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

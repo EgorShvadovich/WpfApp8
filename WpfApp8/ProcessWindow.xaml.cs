@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -90,11 +91,20 @@ namespace WpfApp8
         private Process notepadProcess;
         private void StartNotepad_Click(object sender, RoutedEventArgs e)
         {
-            notepadProcess = Process.Start("notepad.exe");
+            notepadProcess = Process.Start("notepad.exe",file);
             if (notepadProcess is not null)
             {
                 StartNotepad.IsEnabled = false;
                 StopNotepad.IsEnabled = true;
+            }
+        }
+        private string file;
+        private void SelectFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == true)
+            {
+                file = ofd.FileName;
             }
         }
 
@@ -108,6 +118,71 @@ namespace WpfApp8
                 StopNotepad.IsEnabled = false;
 
                 notepadProcess = null;
+            }
+        }
+
+        
+        private Process browserProcess;
+        private void StopBrowser_Click(object sender, RoutedEventArgs e)
+        {
+            browserProcess = Process.Start(@"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe", "-url youtube.com");
+            if (browserProcess is not null)
+            {
+                StartBrowser.IsEnabled = false;
+                StopBrowser.IsEnabled = true;
+            }
+
+        }
+
+        private void StartBrowser_Click(object sender, RoutedEventArgs e)
+        {
+            if (browserProcess is not null)
+            {
+                browserProcess.Kill();
+
+                StartBrowser.IsEnabled = true;
+                StopBrowser.IsEnabled = false;
+
+                browserProcess = null;
+            }
+        }
+
+        private Process procSite;
+        private void StartWeb_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(TextBoxSite.Text))
+            {
+                procSite = Process.Start("C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe", TextBoxSite.Text);
+
+                if (procSite is not null)
+                {
+                    StopWeb.IsEnabled = true;
+                    StartWeb.IsEnabled = false;
+                }
+            }
+            else if (string.IsNullOrEmpty(TextBoxSite.Text))
+            {
+                procSite = Process.Start(TextBoxSite.Text);
+
+                if (procSite is not null)
+                {
+                    StopWeb.IsEnabled = true;
+                    StartWeb.IsEnabled = false;
+                }
+            }
+        }
+
+        private void StopWeb_Click(object sender, RoutedEventArgs e)
+        {
+            if (procSite is not null)
+            {
+                procSite.Kill();
+                procSite.CloseMainWindow();
+                
+                procSite.WaitForExit();
+                StartWeb.IsEnabled = true;
+                StopWeb.IsEnabled = false;
+                procSite = null!;
             }
         }
     }

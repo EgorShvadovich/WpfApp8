@@ -20,6 +20,7 @@ namespace WpfApp8
     /// </summary>
     public partial class TaskWindow : Window
     {
+        private Random random = new Random();
         public TaskWindow()
         {
             InitializeComponent();
@@ -155,6 +156,60 @@ namespace WpfApp8
             {
                 ConsoleWrite(await task);
             }
+        }
+
+        int month = 0;
+        private async Task<double> GetPercentageAsync(int month)
+        {
+            await Task.Delay(random.Next(250, 350)); // случайная задержка
+            double percentage = 0.0;
+
+            if(month == 1)
+                percentage = 0.05;
+            else if(month == 2)
+                percentage = 0.06;
+            else if (month == 3)
+                percentage = 0.07;
+            else if (month == 4)
+                percentage = 0.08;
+            else if (month == 5)
+                percentage = 0.09;
+            else if (month == 6)
+                percentage = 0.1;
+            else if (month == 7)
+                percentage = 0.11;
+            else if (month == 8)
+                percentage = 0.12;
+            else if (month == 9)
+                percentage = 0.13;
+            else if (month == 10)
+                percentage = 0.14;
+            else if (month == 11)
+                percentage = 0.06;
+            else if (month == 12)
+                percentage = 0.15;
+            progressBarDZ.Value += 100.0 / 12;
+            return percentage;
+
+        }
+       
+
+        private async void ButtonStartDZ_Click(object sender, RoutedEventArgs e)
+        {
+            sum = 100;
+            ConsoleBlock.Text = "";
+            for (int i = 0; i < 12; i++)
+            {
+                // Task.Run(PlusPercent).Wait();
+                sum *= (1 + await GetPercentageAsync(month));
+                month++;
+                ConsoleBlock.Text += $"{sum} - {month}\n";
+            }
+        }
+
+        private void ButtonStopDZ_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

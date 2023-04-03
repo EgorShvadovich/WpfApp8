@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp8.HookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="HookWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="StartKbHook" Content="StartKbHook" Click="StartKbHook_Click"/>
+                <Button x:Name="StopKbHook" Content="StopKbHook" Click="StopKbHook_Click"/>
+            </StackPanel>
+            <TextBlock x:Name="HookLogs" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>

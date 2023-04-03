@@ -78,6 +78,18 @@
                         Click="ButtonDemo_5_Click"/>
 
             </DockPanel>
+            <Label Margin="10 10 10 0">1</Label>
+            <DockPanel Margin="10 0 10 0">
+                <Button Content="Start" DockPanel.Dock="Left"  
+                       Margin="0 0 10 0" Padding="7 4" 
+                       x:Name="ButtonStartDZ" 
+                       Click="ButtonStartDZ_Click"/>
+                <Button Content="Stop" DockPanel.Dock="Right" 
+                        Margin="10 0 0 0" Padding="7 4" 
+                          x:Name="ButtonStopDZ" 
+                        Click="ButtonStopDZ_Click"/>
+                <ProgressBar x:Name="progressBarDZ"/>
+            </DockPanel>
         </StackPanel>
 
        

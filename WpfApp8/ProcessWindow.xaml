@@ -26,6 +26,23 @@
                         Click="StartNotepad_Click"/>
                 <Button Content="Закрыть блокнот" x:Name="StopNotepad" 
                         Click="StopNotepad_Click"/>
+            </StackPanel> 
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Запустить браузер" x:Name="StartBrowser" 
+                        Click="StartBrowser_Click"/>
+                <Button Content="Закрыть браузер" x:Name="StopBrowser" 
+                        Click="StopBrowser_Click"/>
+                <Button Content="SelectFile" x:Name="SelectFile"
+                        Click="SelectFile_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="TextBoxSite" Text="https://" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="StartWeb" x:Name="StartWeb"
+                        Click="StartWeb_Click"/>
+                <Button Content="StopWeb" x:Name="StopWeb"
+                        Click="StopWeb_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>
